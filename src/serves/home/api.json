@@ -1,0 +1,6 @@
+{
+    "api":{
+        "getBanners":"/api/getBanner",
+        "getIcon":"/api/icon"
+    }
+}

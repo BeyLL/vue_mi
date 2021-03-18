@@ -1,0 +1,23 @@
+{
+	"banner": {
+		"bannerLists": ["mobile", "zhuang", "bespeak", "mobile"],
+		"code": 200,
+		"success": true
+	},
+	"icons": {
+		"list": [
+			"bijiben",
+			"chaoyue",
+			"dianshi",
+			"huanxin",
+			"miaosha",
+			"shang",
+			"shangxin",
+			"xiyiji",
+			"zhi",
+			"zhineng"
+		],
+        "code": 200,
+		"success": true
+	}
+}
