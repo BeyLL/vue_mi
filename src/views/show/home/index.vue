@@ -3,7 +3,7 @@
  * @Email: zhangwh@uway.com
  * @Date: 2021-03-16 14:37:13
  * @Description: 首页
- * @LastEditTime: 2021-03-19 15:24:11
+ * @LastEditTime: 2021-03-19 16:14:32
 -->
 <template>
   <div>
@@ -22,24 +22,25 @@
       </ul>
       <!-- 商品画报 -->
       <div class="shopPictorial">
-        <div class="pictotrail_left item_pic">
+        <div class="pictorail_left item_pic">
           <img :src="require('@/assets/img/pro.png')"
                alt="">
         </div>
-        <div class="item_pic">
+        <div class="item_pic pictorial_right">
           <div><img :src="require('@/assets/img/match.png')"
                  alt=""></div>
           <div><img :src="require('@/assets/img/system.png')"
                  alt=""></div>
         </div>
-        
+
       </div>
 
       <!-- 活动 -->
       <div class="showAction">
-          <a href="https://s1.mi.com/m/app/hd/index.html?id=14413">
-          <img :src="require('@/assets/img/tanxian.png')" alt="">
-          </a>
+        <a href="https://s1.mi.com/m/app/hd/index.html?id=14413">
+          <img :src="require('@/assets/img/tanxian.png')"
+               alt="">
+        </a>
       </div>
     </div>
   </div>
@@ -106,36 +107,49 @@ export default class Home extends Vue {
   display: flex;
   flex-direction: row;
   margin-top: 0.1rem;
-  height: 2.64rem;
+
   .item_pic {
     width: 50%;
     text-align: center;
   }
 
-  img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+  .pictorail_left {
+    margin-right: 0.02rem;
+
+    img {
+      // width: auto;
+      // height: auto;
+      display: block;
+      max-width: 100%;
+      max-height: 2.64rem;
+    }
   }
 
-  .pictotrail_left {
-    margin-right: 0.02rem;
+  .pictorial_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      // width: auto;
+      // height: auto;
+      max-width: 100%;
+      max-height: 1.32rem;
+      display: block;
+    }
   }
 }
 
-.showAction{
-    margin:.1rem 0;
+.showAction {
+  margin: 0.1rem 0;
 
-    a {
-        display: block;
-        height:100%;
-        img{
-            width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-        }
+  a {
+    display: block;
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 1.45rem;
     }
+  }
 }
 </style>
