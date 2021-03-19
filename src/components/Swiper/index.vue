@@ -3,7 +3,7 @@
  * @Email: zhangwh@uway.com
  * @Date: 2021-03-17 14:14:52
  * @Description: 滑动组件
- * @LastEditTime: 2021-03-18 15:35:29
+ * @LastEditTime: 2021-03-19 14:16:51
 -->
 
 <template>
@@ -41,12 +41,14 @@ export default class Swiper extends Vue {
   @Watch('lists')
   scaleLists(newValue: any[], oldValue: any[]) {
     this.deepLists = newValue
-    console.log(newValue)
+    console.log('重新生成home页')
     newValue && this.getEle()
   }
 
   destroyed() {
     this.stopSwiper()
+
+    
   }
 
   getEle() {

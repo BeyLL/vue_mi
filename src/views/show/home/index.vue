@@ -3,13 +3,14 @@
  * @Email: zhangwh@uway.com
  * @Date: 2021-03-16 14:37:13
  * @Description: 首页
- * @LastEditTime: 2021-03-18 15:04:50
+ * @LastEditTime: 2021-03-19 15:24:11
 -->
 <template>
   <div>
     <div class='swiper-plugin'>
       <swiper :lists="bannerLists"></swiper>
     </div>
+    <!-- 按鈕选择 -->
     <div class="shopNav">
       <ul>
         <li v-for="(item,index) in iconLists"
@@ -19,6 +20,27 @@
                alt="">
         </li>
       </ul>
+      <!-- 商品画报 -->
+      <div class="shopPictorial">
+        <div class="pictotrail_left item_pic">
+          <img :src="require('@/assets/img/pro.png')"
+               alt="">
+        </div>
+        <div class="item_pic">
+          <div><img :src="require('@/assets/img/match.png')"
+                 alt=""></div>
+          <div><img :src="require('@/assets/img/system.png')"
+                 alt=""></div>
+        </div>
+        
+      </div>
+
+      <!-- 活动 -->
+      <div class="showAction">
+          <a href="https://s1.mi.com/m/app/hd/index.html?id=14413">
+          <img :src="require('@/assets/img/tanxian.png')" alt="">
+          </a>
+      </div>
     </div>
   </div>
 
@@ -43,10 +65,9 @@ export default class Home extends Vue {
     return this.$store.state.home.icons
   }
 
-  get bannerLists(){
-      return this.$store.state.home.banners
+  get bannerLists() {
+    return this.$store.state.home.banners
   }
-  
 
   getImages(): void {
     //请求接口获取最新图片
@@ -65,16 +86,56 @@ export default class Home extends Vue {
   ul {
     display: flex;
     flex-wrap: wrap;
+    background: #fff;
   }
 
   .iconImg {
     flex: 0 0 20%;
-    // width: 0.6rem;
     height: 0.7rem;
+    text-align: center;
     img {
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
+}
+
+.shopPictorial {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.1rem;
+  height: 2.64rem;
+  .item_pic {
+    width: 50%;
+    text-align: center;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .pictotrail_left {
+    margin-right: 0.02rem;
+  }
+}
+
+.showAction{
+    margin:.1rem 0;
+
+    a {
+        display: block;
+        height:100%;
+        img{
+            width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+        }
+    }
 }
 </style>
