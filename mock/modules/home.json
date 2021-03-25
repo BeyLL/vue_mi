@@ -1,6 +1,6 @@
 {
 	"banner": {
-		"bannerLists": ["mobile", "zhuang", "bespeak", "mobile"],
+		"bannerLists": ["mobile", "zhuang", "bespeak"],
 		"code": 200,
 		"success": true
 	},

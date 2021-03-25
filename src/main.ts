@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/style/reset.css'
 import '@/assets/iconfont/iconfont.css'
 import '../mock/index'
+import Vconsole from 'vconsole'
+new Vconsole()
 // Vue.config.productionTip = false;
 Vue.use(ElementUI)
 Vue.use(animated)
